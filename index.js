@@ -25,7 +25,11 @@ console.log('Task 1d:', finals[0]["Away Team Goals"]);
 
 //(e) Winner of 2014 world cup final */
 
-
+if(finals[0]["Home Team Goals"] > finals[0]["Away Team Goals"]){
+    console.log('Task 1e:', finals[0]["Home Team Name"]);
+}else{
+    console.log('Task 1e:', finals[0]["Away Team Goals"]);
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -36,12 +40,13 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-// function getFinals(fifaData) {
-//    const teams = fifaData.filter(function(item)){
-//        return item.Stage === "Final";
-//    }
-// }
-// console.log(getFinals(fifaData));
+function getFinals(data) {
+   const finalsTeams = data.filter(function(item){
+       return item.Stage === 'Final';
+   });
+   return finalsTeams;
+}
+console.log('Task 2:', getFinals(fifaData));
 
 
 
